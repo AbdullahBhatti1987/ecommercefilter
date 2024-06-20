@@ -1,0 +1,136 @@
+:root {
+    --blue-darktheme: #006C8C;
+    --blue-lighttheme: #C6C7DA;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(to right, skyblue, pink);
+}
+header {
+    width: 100%;
+    height: 80px;
+    background-color: var(--blue-lighttheme);
+}
+main{
+    width: 100%;
+
+}
+.container {
+    height: 75%;
+    flex-direction: column;
+}
+
+.sidebar {
+    width: 25%;
+    height: 100%;
+    padding: 20px;
+}
+
+.products {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--blue-darktheme);
+    overflow-y: scroll;
+}
+
+.productDetails {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    padding: 10px;
+}
+
+.card {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 calc(25% - 15px);
+    overflow: hidden;
+    padding: 10px;
+    justify-content: space-between;
+    background-color: var(--blue-lighttheme);
+}
+
+.card img {
+    max-width: 200px;
+    max-height: 200px;
+    margin: 10px auto;
+}
+
+.card h3 {
+    max-width: fit-content;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card span {
+    max-width: fit-content;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card .rating, .buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.newProduct {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5px;
+}
+
+.newProduct input[type="file"] {
+    border: none !important;
+}
+
+.newProduct input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.newProduct button {
+    padding: 5px 20px;
+    border-radius: 5px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 30%;
+    }
+    .container {
+        width: 70%;
+    }
+    .card {
+        flex: 1 1 calc(33.3% - 15px);
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .sidebar {
+        width: 40%;
+    }
+    .container {
+        width: 60%;
+    }
+    .card {
+        flex: 1 1 calc(50% - 15px);
+    }
+}
